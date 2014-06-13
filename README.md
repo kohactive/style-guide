@@ -1,9 +1,9 @@
 #The kohactive Style Guide
 
 ## Front-End
-* [Haml](#)
+* [Haml](haml.md)
 * [Sass](sass.md)
-* [Coffeescript](#)
+* [Coffeescript](coffeescript.md)
 
 ## Back-End
-* [Ruby](#)
+* [Ruby](ruby.md)
