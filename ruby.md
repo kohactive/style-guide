@@ -4,7 +4,9 @@
 
 Use underscores aka "Snake case" for variable and method name declaration.
 
-`my_sweet_variable = some_method("hi")`
+```ruby
+my_sweet_variable = some_method("hi")
+```
 
 
 ## Line Length
@@ -12,7 +14,7 @@ Use underscores aka "Snake case" for variable and method name declaration.
 Code lines should break every 80 characters.
 Code broken into additional lines should be indented under the main line of the code statement.
 
-Strings broken accross lines should be indented so all text is stacked in the same columns.
+Strings broken across lines should be indented so all text is stacked in the same columns.
 
 ```ruby
 def do_something
@@ -61,13 +63,17 @@ end
 
 Dont:
 
-`something ="foo" if something? else something_else = "bar"` 
+```ruby
+something ="foo" if something? else something_else = "bar"
+``` 
 
 # Using unless
 
 Unless should only be used for inline conditionals apearing at the end of lines.
 
-` run_some_code unless admin? `
+```ruby
+run_some_code unless admin?
+```
 
 Avoid wrapping blocks in unless, use `if !` instead.
 
@@ -84,7 +90,6 @@ end
 If a conditional requires mutliple evaluations, break the evaluations into functions that can be composed into your conditional and are read semantically.
 
 ```ruby
-
 def older_than?(x)
   self.age > x
 end
@@ -99,7 +104,6 @@ if user.older_than?(25) && user.weighs_more_than?(150)
 end
 
 do_thing3 if user.older_than?(25) && user.weighs_more_than?(150)
-
 ```
 
 Avoid having deeply nested conditionals with mutiple &&'s and ||'s
