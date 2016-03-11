@@ -26,14 +26,32 @@ def do_something
 end
 ```
 
+## Strings
 
+Prefer string interpolation and string formatting instead of string concatenation.
+
+```ruby
+# bad
+email_with_name = user.name + ' <' + user.email + '>'
+
+# good
+email_with_name = "#{user.name} <#{user.email}>"
+email_with_name = format('%s <%s>', user.name, user.email)
+```
+
+Use single quotes for static strings and double quotes when needing to use string interpolation.
+
+```ruby
+last_name = 'Doe'
+name = "Mr. #{last_name}"
+```
 
 ## Inline vs Block Conditionals / Rescues
 
 If the conditional is on a one line statement the conditional is placed in-line.
 
 ```ruby
-something = "some other thing" unless not_something? 
+something = 'some other thing' unless not_something? 
 ```
 
 If the conditional applies to multiple lines of code, wrap the code in a conditional block.
@@ -61,10 +79,9 @@ end
 
 # Never use else inline
 
-Dont:
-
 ```ruby
-something ="foo" if something? else something_else = "bar"
+# bad
+something = 'foo' if something? else something_else = 'bar'
 ``` 
 
 # Using unless
@@ -108,11 +125,10 @@ do_thing3 if user.older_than?(25) && user.weighs_more_than?(150)
 
 Avoid having deeply nested conditionals with mutiple &&'s and ||'s
 
-Dont:
-
 ```ruby
+# bad
 if ((i > 11 && i < 42) || ((x < 11 && x > i) && is_prime?(i)))
-  lol_whut "do it"
+  lol_whut 'do it'
 end
 ```
 
