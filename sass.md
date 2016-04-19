@@ -10,7 +10,7 @@
 
 ##Property Organization
 Block similar properties for readability.
-```
+```sass
 .selector
   /* Pseudo Element */
   content: ""
@@ -43,7 +43,7 @@ Block similar properties for readability.
 
 ##Whitespace
 Maintain whitespace between selectors(with properties) for continuity and readability.
-```
+```sass
 .bojangles
   overflow: visible
   font-family: georgia
@@ -64,7 +64,7 @@ Maintain whitespace between selectors(with properties) for continuity and readab
 
 ##Nesting
 Avoid nesting more than three levels deep. It creates bloated output & over-specificity.
-```
+```sass
 // Bad
 .bicycle
   .wheel
@@ -85,7 +85,7 @@ Avoid nesting more than three levels deep. It creates bloated output & over-spec
 
 ##Mixins
 Use Sass shorthand for creating and using mixins.
-```
+```sass
 =hot-sauce
   background-color: $green
   color: $red
@@ -95,7 +95,7 @@ Use Sass shorthand for creating and using mixins.
 
 ##Responsive
 Use responsive mixins within the selector to keep organized.
-```
+```sass
 =media-sm
   +media(min-width $screen-sm)
     @content
